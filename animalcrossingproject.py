@@ -1,9 +1,12 @@
+import pyinputplus
+import pyinputplus as pyip
+
 print('Welcome to the Animal Crossing Personality Evaluator!')
 
 while True:
-     print('Would you like to play? yes or no ')
-     yesno = input()
-     if yesno == 'yes':
+     prompt = 'Would you like to play? yes or no '
+     answer = pyip.inputYesNo(prompt)
+     if answer == 'yes':
          print('Great! First question: ')
          print('Are you male or female?')
          gender = input()
@@ -42,10 +45,11 @@ while True:
              elif q2f == 'D':
                  print('You are Uchi!')
              break
-     elif yesno == 'no' :
+     elif answer == 'no' :
         print('Okay! Maybe next time.')
         break
+     else:
+          print('Please enter yes or no.')
+          continue
 
 print('Thanks For playing!')
-
-"# animalcrossing" 
