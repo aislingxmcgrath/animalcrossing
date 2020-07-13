@@ -18,15 +18,23 @@ while True:
              print('C) Sleeping')
              print('D) Shopping')
              q2 = input()
-             if q2 == 'A':
-                 print('You are Cranky! ')
-             elif q2 == 'B':
-                 print('You are a Jock! ')
-             elif q2 == 'C':
-                 print('You are Lazy! ')
-             elif q2 == 'D':
-                 print('You are Smug!')
-             break
+             q2 = q2.upper()
+             if q2 in ('A','B','C','D'):
+                  if q2 == 'A':
+                      print('You are Cranky! ')
+                      break
+                  elif q2 == 'B':
+                      print('You are a Jock! ')
+                      break
+                  elif q2 == 'C':
+                      print('You are Lazy! ')
+                      break
+                  elif q2 == 'D':
+                      print('You are Smug!')
+                      break
+             else:
+                       print('Please enter A,B,C or D.')
+                       continue
 
          elif gender == 'female':
              print('Cool! You said female. Next question: ')
@@ -36,15 +44,25 @@ while True:
              print('C) Uptight')
              print('D) Sassy')
              q2f = input()
+             q2f = q2f.upper()
              if q2f == 'A':
                  print('You are Normal! ')
+                 break
              elif q2f == 'B':
                  print('You are Peppy! ')
              elif q2f == 'C':
                  print('You are Snooty! ')
+                 break
              elif q2f == 'D':
                  print('You are Uchi!')
-             break
+                 break
+             else:
+                 print('Please enter A,B,C or D')
+                 continue
+            
+         else:
+             print('Please enter male or female')
+             continue
      elif answer == 'no' :
         print('Okay! Maybe next time.')
         break
